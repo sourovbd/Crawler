@@ -29,15 +29,11 @@ public class CochRaneLibraryCrawler {
             if (link.text().equalsIgnoreCase(ALLERGY_AND_INTOLERANCE)) {
 
                 Document doc1 = getDocumentFromLink(link);
-                System.out.println("link: "+link);
-
                 text.append(printInfo(link, doc1));
 
                 Elements paginationPageLinks = doc1.select(PAGINATON_LINK_TAG);
-
                 for (Element paginationPageLink : paginationPageLinks) {
                     Document doc2 = getDocumentFromLink(paginationPageLink);
-                    System.out.println("paginationPageLink: "+paginationPageLink);
                     text.append(printInfo(link, doc2));
                 }
             }
