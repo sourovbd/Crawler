@@ -1,4 +1,4 @@
-package com.vantage.lab;
+package com.sv.io.handler;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
@@ -10,7 +10,7 @@ import java.io.IOException;
 
 import static java.util.Objects.nonNull;
 
-public class CustomResponseHandler implements ResponseHandler<String> {
+public class HttpResponseHandler implements ResponseHandler<String> {
 
     public String handleResponse(final HttpResponse response) throws IOException {
         int resStatus = response.getStatusLine().getStatusCode();

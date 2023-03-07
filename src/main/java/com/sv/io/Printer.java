@@ -1,4 +1,4 @@
-package com.vantage.lab;
+package com.sv.io;
 
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -7,12 +7,11 @@ import org.jsoup.select.Elements;
 import java.io.FileWriter;
 import java.io.IOException;
 
-import static com.vantage.lab.Constants.*;
+import static com.sv.io.Constants.*;
 
 public class Printer {
 
     public static StringBuilder printInfo(Element link, Document doc) throws IOException {
-
         StringBuilder text = new StringBuilder(EMPTY_STRING);
         Elements elementsByClass = doc.getElementsByClass(SEARCH_RESULT_ITEM_BODY_TAG);
         for (Element element : elementsByClass) {
